@@ -1,0 +1,88 @@
+<! DOCTYPE HTML>
+<HTML lang=“es”>
+<HEAD> 
+<TITLE> PAGINA 3:VIDEO </TITLE> 
+</HEAD>
+<style> 
+ body{
+    background-color: antiquewhite
+    }  
+</style>
+<BODY> 
+    
+ <TABLE  width="90%" height="90%" align="center" color="#c00000">
+     <TR>
+     <td height="5%"></td>
+         </TR>
+     
+     <TR>
+     <td height="5%"></td>
+         </TR>
+<TR>
+    <td width="5%" align="left"></td>
+        
+    <td width="80%" align="center">
+         <video src="Genios renacentistas.mp4" id="ejemplo"
+          type="video/mp4" width=80% autoplay="true" controls>
+        <style>
+            video{
+                border-radius:18px;
+            }
+            video:hover{
+                transform:scale(1.02);
+            }
+        </style>
+    </video>
+            <br><br>
+    
+    <BUTTON onclick="velocidad(0)" type="button"><b><FONT face="Trebuchet MS">PARAR</FONT></b></BUTTON>
+     <style>    
+         button{
+    border: none;
+    background-color:lightcoral;
+    border-radius: 6px;
+    font-size: 17px;
+    opacity:80%;
+    } 
+    </style>
+    <style>    
+   button:hover {
+    opacity:100%;
+    } 
+    </style>
+    
+    <BUTTON onclick="velocidad(1)" type="button"><b><FONT face="Trebuchet MS">REPRODUCIR</FONT></b></BUTTON>
+     <style>    
+   button{
+    border: none;
+    background-color:brown;
+    border-radius: 6px;
+    font-size: 17px;
+    opacity:80%;
+    } 
+    </style>
+    <style>    
+   button:hover {
+    font-size: 19px;
+    opacity:100%;
+    } 
+    </style>
+    <script>
+var vi=document.getElementById('ejemplo');
+function velocidad(p)
+        {
+        vi.playbackRate=p;
+        }
+    </script>
+    </td>
+        
+<td width="5%" align="right"></td>
+</TR> 
+
+   <TR>
+     <td height="5%"></td>
+         </TR>  
+
+</BODY> 
+    
+</HTML> 

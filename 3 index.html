@@ -1,0 +1,64 @@
+<! DOCTYPE HTML>
+<HTML lang=“es”>
+    <META HTTP-EQUIV="Refresh" CONTENT="10">
+<HEAD> 
+<TITLE> Ejercicio 26/02 (Página 2) </TITLE> 
+</HEAD>
+<BODY>
+    <h2><FONT face="Helvetica"> Esto es otra página</FONT></h2> 
+    <a href=index.html><FONT face="Trebuchet MS"><b>IR A INICIO</b> </FONT> </a> <br><br>
+    
+ <form action="" name="ejemplo" onsubmit="leer(); return true">
+     <input type="text" size="4" value="0" name= nº1>
+     <input type="text" size="4" value="0" name= nº2>
+    <input type="submit" value="=">
+</form>
+ 
+    
+<form action="" name="ejemplo" onsubmit="leer2(); return true">
+     <input type="text" size="4" value="0" name= nº>
+    <input type="submit" value="lata atún enviar a cesta">
+</form>
+ 
+<form action="" name="ejemplo" onsubmit="leer3(); return true">
+     <input type="text" size="4" value="0" name= nº2>
+    <input type="submit" value="lata pollo enviar a cesta">
+</form>
+
+<script>
+ function leer()
+     {
+     sumar(ejemplo.nº1.value, ejemplo.nº2.value)    
+     }
+ function sumar(a1,a2)
+     {var sum=Number(a1)+Number(a2);
+         alert(sum);
+     }
+</script>
+
+     
+<script>
+var total_pagar=0;
+function leer2()
+    {
+    var precio 2.13*ejemplo.nº.value;
+    alert("cesta"+precio);
+    total(precio);
+    }
+
+function leer3()
+    {
+    var precio 1.15*ejemplo.nº2.value;
+    alert("cesta"+precio);
+    total(precio);
+    }
+    
+function total(a)
+    {
+    total_pagar=total_pagar+a;
+    alert ()
+    }
+     </script>     
+</BODY> 
+</HTML>
+    
