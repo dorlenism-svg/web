@@ -1,0 +1,211 @@
+<! DOCTYPE HTML>
+<HTML lang=“es”>
+<HEAD> 
+<TITLE> PAGINA 3:VIDEO </TITLE> 
+</HEAD>
+<style> 
+ body{
+    background-color: antiquewhite
+    }  
+</style>
+<BODY> 
+    
+ <TABLE  width="90%" height="90%" align="center" color="#c00000">
+     <TR>
+     <td height="5%"></td>
+         </TR>
+     
+     <TR>
+     <td height="5%"></td>
+         </TR>
+<TR>
+<td width="80%" align="center">
+<video src="Genios renacentistas.mp4" id="ejemplo"
+          type="video/mp4" width=80% autoplay="true" controls>
+        <style>
+            video{
+                border-radius:18px;
+            }
+            video:hover{
+                transform:scale(1.02);
+            }
+        </style>
+    </video>
+            <br><br>
+    <TABLE  width="80%" height="5%" align="center" color="#c00000">
+     <TR>
+     <td width="20%">
+         <BUTTON class="button1" onclick="velocidad(0)" type="button"><img src="icono%20de%20pausa.png" width=30%></BUTTON>
+     <style>    
+         .button1{
+    border: none;
+    background-color:antiquewhite;
+    opacity:80%;
+    } 
+    </style>
+    <style>    
+   .button1:hover {
+    opacity:100%;
+    } 
+    </style>
+   </td>
+    <td width="20%"> 
+    <BUTTON class="button1" onclick="velocidad(1)" type="button"><img src="reproducir.png" width=30%></BUTTON>
+     <style>    
+   .button1{
+    border: none;
+    background-color:antiquewhite;
+    opacity:80%;
+    } 
+    </style>
+    <style>    
+   .button1:hover {
+    font-size: 19px;
+    opacity:100%;
+    } 
+    </style>
+    <td width="20%">
+    <BUTTON class="button1" onclick="sonido_off()" type="button">
+   <img src="sin%20sonido.png" width="30%">
+    <style>    
+         .button1{
+    border: none;
+    background-color:antiquewhite;
+    opacity:70%;
+    } 
+    </style>
+    <style>    
+   button:hover {
+    opacity:100%;
+    } 
+    </style>
+    </BUTTON>
+         </td>
+        <td width="20%">
+<BUTTON class="button1" onclick="sonido_on()" type="button">
+    <img src="volumen.png" width="30%">
+    <style>    
+         .button1{
+    border: none;
+    background-color:antiquewhite;
+    opacity:70%;
+    } 
+    </style>
+    <style>    
+   button:hover {
+    opacity:100%;
+    } 
+    </style>
+    </BUTTON></td>
+    <script>
+var vi=document.getElementById('ejemplo');
+function velocidad(p)
+        {
+        vi.playbackRate=p;
+        }
+    </script>
+    </TR>
+<TR>
+<td width="16%" align="center"></td>
+<TR>
+<td width="16%" align="center">
+<BUTTON onclick="velocidad(0.5)" type="button"><b><FONT face="Trebuchet MS">x0.5</FONT></b>
+     <style>    
+   button{
+    border: none;
+    background-color:brown;
+    border-radius: 6px;
+    font-size: 17px;
+    opacity:70%;
+    } 
+    </style>
+    <style>    
+   button:hover {
+    font-size: 19px;
+    opacity:100%;
+    } 
+    </style>
+     </BUTTON>
+ </td>
+<td width="16%" align="center">
+ <BUTTON onclick="velocidad(2)" type="button"><b><FONT face="Trebuchet MS">x2</FONT></b>
+     <style>    
+   button{
+    border: none;
+    background-color:brown;
+    border-radius: 6px;
+    font-size: 17px;
+    opacity:70%;
+    } 
+    </style>
+    <style>    
+   button:hover {
+    font-size: 19px;
+    opacity:100%;
+    } 
+    </style>
+     </BUTTON>
+</td>
+<td width="16%" align="center">
+<BUTTON onclick="velocidad(8)" type="button"><b><FONT face="Trebuchet MS">x8</FONT></b>
+     <style>    
+   button{
+    border: none;
+    background-color:brown;
+    border-radius: 6px;
+    font-size: 17px;
+    opacity:70%;
+    } 
+    </style>
+    <style>    
+   button:hover {
+    font-size: 19px;
+    opacity:100%;
+    } 
+    </style>
+    </BUTTON>
+</td>
+<td width="16%" align="center">
+<BUTTON onclick="pantalla()" type="button">
+    PANTALLA COMPLETA
+    </BUTTON> 
+</td>
+</TR>
+    <style>    
+   {
+    border: none;
+    background-color:brown;
+    border-radius: 6px;
+    font-size: 17px;
+    } 
+    </style>
+    <script>
+var vi=document.getElementById('ejemplo');
+function pantalla()
+        {
+            vi.requestFullscreen();
+        }
+function sonido_off()
+        {
+        vi.muted=true;
+        }
+function sonido_on()
+        {
+        vi.muted=false;
+        }
+        
+function leer()
+        {
+        var cc=bb.número.value;
+        velocidad(Number(cc));
+        }
+function velocidad(p)
+        {
+        vi.playbackRate=p;
+        }
+    </script>
+</TABLE>
+    
+</BODY> 
+    
+</HTML> 
