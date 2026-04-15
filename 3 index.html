@@ -1,64 +1,138 @@
 <! DOCTYPE HTML>
 <HTML lang=“es”>
-    <META HTTP-EQUIV="Refresh" CONTENT="10">
+    <META HTTP-EQUIV="Refresh" CONTENT="90">
 <HEAD> 
-<TITLE> Ejercicio 26/02 (Página 2) </TITLE> 
+<TITLE> Página web 2 Formulario </TITLE> 
 </HEAD>
+ <style> 
+ body{
+    background-color: #fdf4e5;
+    }  
+</style>       
+    
 <BODY>
-    <h2><FONT face="Helvetica"> Esto es otra página</FONT></h2> 
-    <a href=index.html><FONT face="Trebuchet MS"><b>IR A INICIO</b> </FONT> </a> <br><br>
-    
- <form action="" name="ejemplo" onsubmit="leer(); return true">
-     <input type="text" size="4" value="0" name= nº1>
-     <input type="text" size="4" value="0" name= nº2>
-    <input type="submit" value="=">
-</form>
- 
-    
-<form action="" name="ejemplo" onsubmit="leer2(); return true">
-     <input type="text" size="4" value="0" name= nº>
-    <input type="submit" value="lata atún enviar a cesta">
-</form>
- 
-<form action="" name="ejemplo" onsubmit="leer3(); return true">
-     <input type="text" size="4" value="0" name= nº2>
-    <input type="submit" value="lata pollo enviar a cesta">
-</form>
+    <h2><FONT face="Helvetica"> FORMULARIO</FONT></h2> 
+    <a href=p%C3%A1gina%201.html><FONT face="Trebuchet MS"><b>IR A PÁGINA PREVIA</b> </FONT> </a> <br><br>
+ <BUTTON onclick="mensaje()" type="button">INFORMACIÓN
+<style>    
+   button{
+    border: none;
+    background-color:bisque;
+    border-radius: 6px;
+    font-size: 14px;
+    } 
+    </style>
 
+</BUTTON>
+   
 <script>
- function leer()
+function mensaje()
+    {
+    alert("Aquí podrá comprar productos para su compañero gatuno");
+    }
+    mensaje()
+</script>   
+<br><br>
+<TABLE>
+<TR>
+<td>
+<FONT face="Helvetica">LATA DE ATÚN</FONT>
+</td>
+</TR>
+<TR>
+<td>
+<img src="lata%20de%20atun%20para%20gatos.png" width=10%>
+</td>
+</TR>
+<TR>
+<td>
+ <form name="ejemplo1" onsubmit="leer(); return false">
+  <input type="text" size="4" value="0" name="numero1">
+  <input type="submit" value="Enviar a cesta" class="input3">
+</form>
+    
+<style>    
+   .input3{
+    border: none;
+    background-color:#f75e25;
+    border-radius: 3px;
+    font-size: 15px;
+    } 
+    </style>
+</TR>    
+ <TR>
+<td>   
+<FONT face="Helvetica">LATA DE POLLO</FONT>
+</TR>
+<TR>
+<td>
+<img src="lata%20de%20pollo%20para%20gatos.png" width=11%>
+</TR>
+<TR>
+<td>
+<form name="ejemplo2" onsubmit="leer2(); return false">
+  <input type="text" size="4" value="0" name="numero2">
+  <input type="submit" value="Enviar a cesta" class="input3">
+</form>
+    
+<style>    
+   .input3{
+    border: none;
+    background-color:#f75e25;
+    border-radius: 3px;
+    font-size: 15px;
+    } 
+    </style>
+</TR>
+</TABLE>
+<script>
+function leer() 
+    {
+    var precio = 2.13 * document.forms["ejemplo1"]["numero1"].value;
+    alert("Cesta: " + precio);
+}
+
+function leer2() 
+    {
+    var precio = 1.15 * document.forms["ejemplo2"]["numero2"].value;
+    alert("Cesta: " + precio);
+}
+</script> 
+    
+<br><br><br>
+    
+ <form action="" name="ejemplo" onsubmit="leer3(); return true">
+     <input type="text" size="4" value="" name="num1" class="input2">
+     <input type="text" size="4" value="" name="num2" class="input2">
+     <input type="submit" value="=" class="input1">
+</form>
+    
+<script>
+ function leer3()
      {
-     sumar(ejemplo.nº1.value, ejemplo.nº2.value)    
+     sumar(ejemplo.num1.value,ejemplo.num2.value);    
      }
- function sumar(a1,a2)
-     {var sum=Number(a1)+Number(a2);
+ function sumar(a,b)
+     {var sum=Number(a)+Number(b);
          alert(sum);
      }
 </script>
-
-     
-<script>
-var total_pagar=0;
-function leer2()
-    {
-    var precio 2.13*ejemplo.nº.value;
-    alert("cesta"+precio);
-    total(precio);
-    }
-
-function leer3()
-    {
-    var precio 1.15*ejemplo.nº2.value;
-    alert("cesta"+precio);
-    total(precio);
-    }
+ 
+<style>    
+   .input1{
+    border: none;
+    background-color:#bfff00;
+    border-radius: 70px;
+    font-size: 21px;
+    } 
+    </style>
     
-function total(a)
-    {
-    total_pagar=total_pagar+a;
-    alert ()
-    }
-     </script>     
-</BODY> 
-</HTML>
-    
+<style>    
+   .input2{
+    border:#bfff00;
+    background-color:#96c8a2;
+    border-radius: 5px;
+    border width:21px; 
+    font-size: 19px;
+    } 
+</style>     
